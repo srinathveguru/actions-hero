@@ -14,7 +14,7 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
         with:
-          issue-number: echo '${{ toJSON(github.event) }}' | jq
+          issue-number: echo '${{ github.event.issue.number }}' | jq
           body: |
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
