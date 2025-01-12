@@ -34,7 +34,7 @@ jobs:
               Comment but from the API call not action
               '
           env:
-            GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
-            ORAGANIZATION: ${{ github.event.srinathveguru.login }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ORGANIZATION: ${{ github.event.repository.owner.login }} #JSON structure changed
             REPOSITORY: ${{ github.event.repository.name }}
             ISSUE_NUMBER: ${{ github.event.issue.number }}
